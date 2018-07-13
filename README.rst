@@ -16,12 +16,6 @@ django-autoslug
 .. image:: https://img.shields.io/pypi/pyversions/django-autoslug-iplweb.svg
     :target: https://pypi.python.org/pypi/django-autoslug-iplweb
 
-.. image:: https://img.shields.io/pypi/dd/django-autoslug-iplweb.svg
-    :target: https://pypi.python.org/pypi/django-autoslug-iplweb
-
-.. image:: https://readthedocs.org/projects/django-autoslug-iplweb/badge/?version=stable
-    :target: http://django-autoslug-iplweb.readthedocs.org/en/stable/
-
 .. image:: https://readthedocs.org/projects/django-autoslug-iplweb/badge/?version=latest
     :target: http://django-autoslug-iplweb.readthedocs.org/en/latest/
 
@@ -37,7 +31,7 @@ The field is highly configurable.
 Requirements
 ------------
 
-*Python 2.7, 3.5 or PyPy*.
+*Python 2.7, 3.5, 3.6
 
 *Django 1.7.10* or higher.
 
