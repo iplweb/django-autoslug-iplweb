@@ -4,15 +4,6 @@ python:
   - 3.5
   - 3.6
   - pypy
-#  - pypy3
 sudo: false
-install:
-  - pip install -r requirements/testing.txt
-  - pip install coveralls
-script:
-  coverage run --source=autoslug run_tests.py
-after_success:
-  coveralls
-notifications:
-  email:
-    - michal.dtz+travis@gmail.com
+install: pip install tox-travis
+script: tox
