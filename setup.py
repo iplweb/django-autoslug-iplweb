@@ -21,7 +21,7 @@ from _version_helper import __version__
 readme = open(os.path.join(os.path.dirname(__file__), 'README.rst')).read()
 
 setup(
-    name     = 'django-autoslug',
+    name     = 'django-autoslug-iplweb',
     version  = __version__,
     packages = ['autoslug'],
 
