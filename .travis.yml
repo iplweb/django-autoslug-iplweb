@@ -2,6 +2,7 @@ language: python
 python:
   - 2.7
   - 3.5
+  - 3.6
   - pypy
 #  - pypy3
 sudo: false
@@ -14,4 +15,4 @@ after_success:
   coveralls
 notifications:
   email:
-    - neithere+travis@gmail.com
+    - michal.dtz+travis@gmail.com
