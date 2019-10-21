@@ -281,9 +281,6 @@ class AutoSlugField(SlugField):
             elif not self.null:
                 slug = ''
 
-        if not self.blank:
-            assert slug, 'slug is defined before trying to ensure uniqueness'
-
         if slug:
             slug = utils.crop_slug(self, slug)
 
