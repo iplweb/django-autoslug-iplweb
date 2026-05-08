@@ -9,12 +9,12 @@ django-autoslug
     :target: https://pypi.python.org/pypi/django-autoslug-iplweb
     :alt: PyPI version
 
-.. image:: https://img.shields.io/pypi/pyversions/django-autoslug-iplweb.svg
-    :target: https://pypi.python.org/pypi/django-autoslug-iplweb
+.. image:: https://img.shields.io/badge/python-3.12%20%7C%203.13%20%7C%203.14-blue.svg
+    :target: https://www.python.org/
     :alt: Supported Python versions
 
-.. image:: https://img.shields.io/pypi/djversions/django-autoslug-iplweb.svg
-    :target: https://pypi.python.org/pypi/django-autoslug-iplweb
+.. image:: https://img.shields.io/badge/django-5.2%20%7C%206.0-green.svg
+    :target: https://www.djangoproject.com/
     :alt: Supported Django versions
 
 .. image:: https://img.shields.io/pypi/l/django-autoslug-iplweb.svg
