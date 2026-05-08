@@ -64,3 +64,9 @@ docs/_build/
 # uv / virtualenv
 .venv/
 uv.lock
+
+# pytest
+.pytest_cache/
+
+# ruff
+.ruff_cache/
