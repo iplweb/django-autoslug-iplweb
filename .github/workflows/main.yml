@@ -36,7 +36,7 @@ jobs:
       - name: Pin Django to matrix version
         env:
           DJANGO_VERSION: ${{ matrix.django-version }}
-        run: uv pip install "Django~=${DJANGO_VERSION}.0"
+        run: uv pip install --reinstall-package django "Django~=${DJANGO_VERSION}.0"
 
       - name: Python and Django versions
         env:
@@ -44,11 +44,11 @@ jobs:
           DJ_VERSION: ${{ matrix.django-version }}
         run: |
           echo "Python ${PY_VERSION} -> Django ${DJ_VERSION}"
-          uv run python --version
-          uv run django-admin --version
+          uv run --no-sync python --version
+          uv run --no-sync django-admin --version
 
       - name: Run tests
-        run: uv run pytest --cov=autoslug
+        run: uv run --no-sync pytest --cov=autoslug
 
   deploy:
     name: Deploy

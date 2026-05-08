@@ -69,6 +69,16 @@ target-version = "py312"
 [tool.ruff.lint]
 select = ["E", "F", "W"]
 
+[tool.ruff.lint.per-file-ignores]
+# Pre-existing upstream legacy code; not in scope to reformat.
+"autoslug/fields.py" = ["E501", "E721"]
+"autoslug/utils.py" = ["E501", "E731", "F401", "F821"]
+"autoslug/tests/tests.py" = ["E501", "F403", "F405", "F841"]
+"autoslug/tests/models.py" = ["E501", "E731", "F401"]
+"autoslug/settings.py" = ["E501", "F401"]
+"autoslug/__init__.py" = ["F401"]
+"docs/conf.py" = ["E501", "E402"]
+
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = "autoslug.tests.settings"
 python_files = ["tests.py", "test_*.py"]
