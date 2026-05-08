@@ -1,11 +1,67 @@
-[tool.poetry]
+[build-system]
+requires = ["setuptools>=75.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
 name = "django-autoslug-iplweb"
 version = "1.9.9"
-description = "AutoSlugField for Django"
-authors = ["Justin Mayer <entroP@gmail.com>"]
+description = "An automated slug field for Django."
 readme = "README.rst"
-license = "LGPL-3.0"
-keywords = ["django", "model"]
+requires-python = ">=3.9"
+license = {text = "GNU Lesser General Public License (LGPL), Version 3"}
+authors = [
+    {name = "Justin Mayer", email = "entrop@gmail.com"},
+]
+keywords = ["django", "field", "slug", "auto", "unique", "transliteration", "i18n"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Web Environment",
+    "Framework :: Django",
+    "Framework :: Django :: 3.2",
+    "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.0",
+    "Framework :: Django :: 5.1",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Text Processing :: General",
+]
+dependencies = [
+    "django>=3.2",
+]
+
+[project.optional-dependencies]
+cyrillic = ["pytils>=0.2"]
+translitcodec = ["translitcodec>=0.3"]
+dev = [
+    "coverage>=5.0.3",
+    "django-modeltranslation>=0.10",
+    "pytils>=0.2",
+    "Unidecode>=0.04",
+    "pytz",
+]
+docs = [
+    "Sphinx>=7.0",
+    "docutils>=0.7",
+    "Pygments>=1.2",
+]
+
+[project.urls]
+Homepage = "https://github.com/iplweb/django-autoslug-iplweb/"
+Repository = "https://github.com/iplweb/django-autoslug-iplweb/"
+Upstream = "https://github.com/justinmayer/django-autoslug/"
+
+[tool.setuptools]
+packages = ["autoslug"]
 
 [tool.autopub]
 project-name = "django-autoslug-iplweb"
@@ -16,6 +72,3 @@ changelog-header = "~~~~~~~~~"
 version-strings = ["autoslug/__init__.py"]
 tag-prefix = "v"
 build-system = "setuptools"
-
-[build-system]
-requires = ["setuptools >= 40.6.0", "wheel"]
