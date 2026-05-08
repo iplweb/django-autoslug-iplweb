@@ -48,6 +48,7 @@ dev = [
     "pytils>=0.2",
     "Unidecode>=0.04",
     "pytz",
+    "bump-my-version>=0.28",
 ]
 docs = [
     "Sphinx>=7.0",
@@ -72,3 +73,32 @@ changelog-header = "~~~~~~~~~"
 version-strings = ["autoslug/__init__.py"]
 tag-prefix = "v"
 build-system = "setuptools"
+
+[tool.bumpversion]
+current_version = "1.9.9"
+commit = true
+tag = false
+parse = '(?P<major>\d+)\.(?P<minor>\d+)\.(?P<patch>\d+)(\-(?P<release>[a-z]+))?'
+serialize = [
+    "{major}.{minor}.{patch}-{release}",
+    "{major}.{minor}.{patch}",
+]
+
+[tool.bumpversion.parts.release]
+optional_value = "gamma"
+values = ["dev", "gamma"]
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'version = "{current_version}"'
+replace = 'version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "pyproject.toml"
+search = 'current_version = "{current_version}"'
+replace = 'current_version = "{new_version}"'
+
+[[tool.bumpversion.files]]
+filename = "autoslug/__init__.py"
+search = "__version__ = '{current_version}'"
+replace = "__version__ = '{new_version}'"
