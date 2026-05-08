@@ -47,13 +47,49 @@ jobs:
           uv run --no-sync python --version
           uv run --no-sync django-admin --version
 
-      - name: Run tests
+      - name: Run tests (SQLite)
         run: uv run --no-sync pytest --cov=autoslug
+
+  test-postgres:
+    name: Test (PostgreSQL) - Python ${{ matrix.python-version }} - Django ${{ matrix.django-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version:
+          - "3.12"
+          - "3.14"
+        django-version:
+          - "5.2"
+          - "6.0"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Set up Python ${{ matrix.python-version }}
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: uv sync --all-extras
+
+      - name: Pin Django to matrix version
+        env:
+          DJANGO_VERSION: ${{ matrix.django-version }}
+        run: uv pip install --reinstall-package django "Django~=${DJANGO_VERSION}.0"
+
+      - name: Run tests (PostgreSQL via testcontainers)
+        env:
+          DJANGO_SETTINGS_MODULE: autoslug.tests.settings_postgres
+        run: uv run --no-sync pytest -v
 
   deploy:
     name: Deploy
     environment: Deployment
-    needs: test
+    needs: [test, test-postgres]
     runs-on: ubuntu-latest
     if: github.ref=='refs/heads/master' && github.event_name!='pull_request'
 
