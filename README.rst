@@ -1,26 +1,25 @@
 django-autoslug
 ~~~~~~~~~~~~~~~
 
-.. image:: https://img.shields.io/github/actions/workflow/status/iplweb/django-autoslug-iplweb/main.yml?branch=master
-    :target: https://github.com/iplweb/django-autoslug-iplweb/actions
-
-.. image:: https://img.shields.io/pypi/format/django-autoslug-iplweb.svg
-    :target: https://pypi.python.org/pypi/django-autoslug-iplweb
-
-.. image:: https://img.shields.io/pypi/status/django-autoslug-iplweb.svg
-    :target: https://pypi.python.org/pypi/django-autoslug-iplweb
+.. image:: https://github.com/iplweb/django-autoslug-iplweb/actions/workflows/main.yml/badge.svg?branch=master
+    :target: https://github.com/iplweb/django-autoslug-iplweb/actions/workflows/main.yml
+    :alt: Build status
 
 .. image:: https://img.shields.io/pypi/v/django-autoslug-iplweb.svg
     :target: https://pypi.python.org/pypi/django-autoslug-iplweb
+    :alt: PyPI version
 
 .. image:: https://img.shields.io/pypi/pyversions/django-autoslug-iplweb.svg
     :target: https://pypi.python.org/pypi/django-autoslug-iplweb
+    :alt: Supported Python versions
 
-.. image:: https://img.shields.io/pypi/dd/django-autoslug-iplweb.svg
+.. image:: https://img.shields.io/pypi/djversions/django-autoslug-iplweb.svg
     :target: https://pypi.python.org/pypi/django-autoslug-iplweb
+    :alt: Supported Django versions
 
-.. image:: https://readthedocs.org/projects/django-autoslug/badge/?version=latest
-    :target: https://django-autoslug.readthedocs.io/en/latest/
+.. image:: https://img.shields.io/pypi/l/django-autoslug-iplweb.svg
+    :target: https://github.com/iplweb/django-autoslug-iplweb/blob/master/COPYING.LESSER
+    :alt: License: LGPL-3.0
 
 Django-autoslug is a reusable Django library that provides an improved
 slug field which can automatically:
