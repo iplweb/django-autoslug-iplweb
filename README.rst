@@ -1,8 +1,8 @@
 django-autoslug
 ~~~~~~~~~~~~~~~
 
-.. image:: https://img.shields.io/travis/iplweb/django-autoslug.svg
-    :target: https://travis-ci.org/iplweb/django-autoslug-iplweb
+.. image:: https://img.shields.io/github/actions/workflow/status/iplweb/django-autoslug-iplweb/main.yml?branch=master
+    :target: https://github.com/iplweb/django-autoslug-iplweb/actions
 
 .. image:: https://img.shields.io/pypi/format/django-autoslug-iplweb.svg
     :target: https://pypi.python.org/pypi/django-autoslug-iplweb
@@ -16,24 +16,27 @@ django-autoslug
 .. image:: https://img.shields.io/pypi/pyversions/django-autoslug-iplweb.svg
     :target: https://pypi.python.org/pypi/django-autoslug-iplweb
 
-.. image:: https://readthedocs.org/projects/django-autoslug-iplweb/badge/?version=latest
-    :target: http://django-autoslug-iplweb.readthedocs.org/en/latest/
+.. image:: https://img.shields.io/pypi/dd/django-autoslug-iplweb.svg
+    :target: https://pypi.python.org/pypi/django-autoslug-iplweb
+
+.. image:: https://readthedocs.org/projects/django-autoslug/badge/?version=latest
+    :target: https://django-autoslug.readthedocs.io/en/latest/
 
 Django-autoslug is a reusable Django library that provides an improved
 slug field which can automatically:
 
 a) populate itself from another field,
 b) preserve uniqueness of the value and
-c) use custom `slugify()` functions for better i18n.
+c) use custom ``slugify()`` functions for better i18n.
 
 The field is highly configurable.
 
 Requirements
 ------------
 
-*Python 2.7, 3.5, 3.6
+*Python 3.9+ or PyPy*.
 
-*Django 1.7.10* or higher.
+*Django 3.2* or higher.
 
 It may be possible to successfully use django-autoslug in other environments
 but they are not tested.
@@ -41,7 +44,14 @@ but they are not tested.
 .. note::
 
   PyPy3 is not officially supported only because there were some problems with
-  permissions and `__pycache__` on CI unrelated to django-autoslug itself.
+  permissions and ``__pycache__`` on CI unrelated to django-autoslug itself.
+
+Installation
+------------
+
+.. code-block:: python
+
+    python -m pip install django-autoslug
 
 Examples
 --------
@@ -76,18 +86,20 @@ More complex example:
 Documentation
 -------------
 
-See the `complete documentation <http://django-autoslug.readthedocs.org>`_
+See the `complete documentation <https://django-autoslug.readthedocs.org>`_
 on ReadTheDocs.  It is built automatically for the latest version.
 
 Community
 ---------
 
-This application was initially created by Andy Mikhailenko and then improved
-by other developers. They are listed in `AUTHORS.rst`.
+This application is maintained by Justin Mayer. It was initially created by
+Andy Mikhailenko and then improved by other developers. They are listed in
+``AUTHORS.rst``.
 
 Please feel free to file issues and/or submit patches.
 
-See `CONTRIBUTING.rst` for hints related to the preferred workflow.
+See ``CONTRIBUTING.rst`` for hints related to the preferred workflow.
+
 
 Licensing
 ---------
