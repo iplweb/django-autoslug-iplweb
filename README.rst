@@ -34,17 +34,35 @@ The field is highly configurable.
 Requirements
 ------------
 
-*Python 3.9+ or PyPy*.
+*Python 3.12, 3.13, or 3.14.*
 
-*Django 3.2* or higher.
+*Django 5.2 LTS or 6.0.*
 
-It may be possible to successfully use django-autoslug in other environments
-but they are not tested.
+Supported versions matrix
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
+Every cell below is exercised in CI on each push:
 
-  PyPy3 is not officially supported only because there were some problems with
-  permissions and ``__pycache__`` on CI unrelated to django-autoslug itself.
++----------------+--------------+--------------+--------------+
+|                | Python 3.12  | Python 3.13  | Python 3.14  |
++================+==============+==============+==============+
+| Django 5.2 LTS | ✓            | ✓            | ✓            |
++----------------+--------------+--------------+--------------+
+| Django 6.0     | ✓            | ✓            | ✓            |
++----------------+--------------+--------------+--------------+
+
+Older Python and Django versions reached end-of-life and are no longer
+supported by this fork:
+
+* Django 4.2 LTS (extended support ended 2026-04-07)
+* Django 5.0 / 5.1 (mainstream support ended)
+* Python 3.9 / 3.10 / 3.11 (Django 5.2 minimum is 3.10, but Django 6.0
+  requires 3.12+, so the intersection is 3.12+)
+
+When Django 6.1 / 6.2 LTS ship, they will be added to the matrix.
+
+It may be possible to successfully use django-autoslug-iplweb in other
+environments but they are not tested.
 
 Installation
 ------------
